@@ -1,0 +1,27 @@
+# How to use mssql express container
+https://hub.docker.com/_/microsoft-mssql-server
+
+# Install Docker-CE
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+
+# Database ERD Tool
+https://erdplus.com/
+
+# Setup pyodbc for python3
+https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15#ubuntu17
+
+# Setup pyodbc driver for ubuntu 20.04
+https://www.osradar.com/how-to-install-odbc-on-ubuntu-20-04/
+
+# Online UUID Generator
+https://www.uuidgenerator.net/version4
+
+# Tasks
+[x] Automate docker container MSSQL server build
+[ ] Create seed data
+    [ ] Playbook
+    [ ] Role
+    [ ] Host
+    [ ] Ansible Config
+    [x] Project
+[ ] Load seed data successfully
