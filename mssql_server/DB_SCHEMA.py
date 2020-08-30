@@ -28,7 +28,7 @@ CREATE TABLE Playbook
 (
   playbook_id CHAR(36) NOT NULL,
   playbook_name VARCHAR(25) NOT NULL,
-  json_playbook VARCHAR(4000) NOT NULL,
+  playbook_url VARCHAR(200) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (playbook_id),
   FOREIGN KEY (project_id) REFERENCES Project(project_id)
@@ -47,8 +47,8 @@ CREATE TABLE Role
 (
   role_id CHAR(36) NOT NULL,
   role_url VARCHAR(200) NOT NULL,
-  project_id CHAR(36) NOT NULL,
   role_name VARCHAR(25) NOT NULL,
+  project_id CHAR(36) NOT NULL,
   PRIMARY KEY (role_id),
   FOREIGN KEY (project_id) REFERENCES Project(project_id)
 );
@@ -56,7 +56,7 @@ CREATE TABLE Role
 CREATE TABLE Output
 (
   output_id CHAR(36) NOT NULL,
-  json_output VARCHAR(5000) NOT NULL,
+  json_output VARCHAR(8000) NOT NULL,
   start_time VARCHAR(25) NOT NULL,
   end_time VARCHAR(25) NOT NULL,
   status CHAR(7) NOT NULL,

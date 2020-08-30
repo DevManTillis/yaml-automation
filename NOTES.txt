@@ -1,3 +1,5 @@
+## Knowledge Base Articles/Links
+
 # How to use mssql express container
 https://hub.docker.com/_/microsoft-mssql-server
 
@@ -16,15 +18,25 @@ https://www.osradar.com/how-to-install-odbc-on-ubuntu-20-04/
 # Online UUID Generator
 https://www.uuidgenerator.net/version4
 
-# Reference Project ID
+# Reference Project ID for relations
 277c3e51-7f39-4a95-8e23-e0287c91d046
+
 
 # Tasks
 [x] Automate docker container MSSQL server build
-[ ] Create seed data
-    [ ] Playbook
-    [ ] Role
-    [ ] Host
+[x] Create seed data
+    [x] Playbook
+    [x] Role
+    [x] Host
     [x] Ansible Config
     [x] Project
-[ ] Load seed data successfully
+    [x] Command
+[x] Load seed data successfully
+[ ] Build Python3 CRUD Rest APIs for each table
+
+## How to Load Seed Data
+1. Ensure Python3 3.8.2 is install on local ubuntu system
+2. Install Docker-CE locally
+3. Install pyodbc locally for python3
+4. Run mssql_server/build_mssql_container.sh
+5. Run mssql_server/zseed_mssql_database.py

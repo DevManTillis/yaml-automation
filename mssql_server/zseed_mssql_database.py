@@ -19,6 +19,10 @@ def main():
     list_data(db_connection=conn, cursor=cursor)
     create_project_seed_data(db_connection=conn, cursor=cursor)
     create_ansible_config_seed_data(db_connection=conn, cursor=cursor)
+    create_host_seed_data(db_connection=conn, cursor=cursor)
+    create_role_seed_data(db_connection=conn, cursor=cursor)
+    create_playbook_seed_data(db_connection=conn, cursor=cursor)
+    create_command_seed_data(db_connection=conn, cursor=cursor)
 
 
 
@@ -36,20 +40,81 @@ def load_schema(cursor=None):
 
 
 def list_data(db_connection=None, cursor=None):
+    tables = ["Project","AnsibleConfiguration","Role","Host","Playbook","Command", "Output"]
     try:
-        cursor.execute("SELECT * FROM Project")
-        for row in cursor.fetchall():
-            print (row)
-        cursor.execute("SELECT * FROM AnsibleConfiguration")
-        for row in cursor.fetchall():
-            print (row)
+        for table in tables:
+            print(table)
+            cursor.execute(f"SELECT * FROM {table}")
+            for row in cursor.fetchall():
+                print (row)
+    except Exception as err:
+        lazylog(err)
+
+def create_command_seed_data(db_connection=None, cursor=None):
+    try:
+        seed_data = list()
+        with open("seed_data/Command_seed_data.csv", "r") as data:
+            seed_data = data.readlines()
+        for row in seed_data:
+            columns = row.split(',')
+            cursor.execute(f"""
+            INSERT INTO Command (cmd_id, arguments, project_id)
+            VALUES ('{columns[0].strip()}', '{columns[1].strip()}', '{columns[2].strip()}');
+            """)
+        db_connection.commit()
+    except Exception as err:
+        lazylog(err)
+
+def create_playbook_seed_data(db_connection=None, cursor=None):
+    try:
+        seed_data = list()
+        with open("seed_data/Playbook_seed_data.csv", "r") as data:
+            seed_data = data.readlines()
+        for row in seed_data:
+            columns = row.split(',')
+            cursor.execute(f"""
+            INSERT INTO Playbook (playbook_id, playbook_name, playbook_url, project_id)
+            VALUES ('{columns[0].strip()}', '{columns[1].strip()}', '{columns[2].strip()}', '{columns[3].strip()}');
+            """)
+        db_connection.commit()
+    except Exception as err:
+        lazylog(err)
+
+def create_role_seed_data(db_connection=None, cursor=None):
+    try:
+        seed_data = list()
+        with open("seed_data/Role_seed_data.csv", "r") as data:
+            seed_data = data.readlines()
+        for row in seed_data:
+            columns = row.split(',')
+            cursor.execute(f"""
+            INSERT INTO Role (role_id, role_name, role_url, project_id)
+            VALUES ('{columns[0].strip()}', '{columns[1].strip()}', '{columns[2].strip()}', '{columns[3].strip()}');
+            """)
+        db_connection.commit()
+    except Exception as err:
+        lazylog(err)
+
+
+def create_host_seed_data(db_connection=None, cursor=None):
+    try:
+        host_seed_data = list()
+        with open("seed_data/Host_seed_data.csv", "r") as data:
+            host_seed_data = data.readlines()
+        for row in host_seed_data:
+            columns = row.split(',')
+            cursor.execute(f"""
+            INSERT INTO Host (host_id, host_name, project_id)
+            VALUES ('{columns[0].strip()}', '{columns[1].strip()}', '{columns[2].strip()}');
+            """)
+        db_connection.commit()
     except Exception as err:
         lazylog(err)
 
 def create_project_seed_data(db_connection=None, cursor=None):
     try:
         projects_seed_data = list()
-        with open("seed_data/Projects_seed_data.csv", "r") as data:
+        with open("seed_data/Project_seed_data.csv", "r") as data:
             projects_seed_data = data.readlines()
         for row in projects_seed_data:
             columns = row.split(',')
