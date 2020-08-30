@@ -12,7 +12,7 @@ CREATE TABLE AnsibleConfiguration
   json_config VARCHAR(1000) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (config_id),
-  FOREIGN KEY (project_id) REFERENCES Project(project_id)
+  FOREIGN KEY (project_id) REFERENCES Project(project_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Command
@@ -21,7 +21,7 @@ CREATE TABLE Command
   arguments VARCHAR(36) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (cmd_id),
-  FOREIGN KEY (project_id) REFERENCES Project(project_id)
+  FOREIGN KEY (project_id) REFERENCES Project(project_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Playbook
@@ -31,7 +31,7 @@ CREATE TABLE Playbook
   playbook_url VARCHAR(200) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (playbook_id),
-  FOREIGN KEY (project_id) REFERENCES Project(project_id)
+  FOREIGN KEY (project_id) REFERENCES Project(project_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Host
@@ -40,7 +40,7 @@ CREATE TABLE Host
   host_name VARCHAR(25) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (host_id),
-  FOREIGN KEY (project_id) REFERENCES Project(project_id)
+  FOREIGN KEY (project_id) REFERENCES Project(project_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Role
@@ -50,7 +50,7 @@ CREATE TABLE Role
   role_name VARCHAR(25) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (role_id),
-  FOREIGN KEY (project_id) REFERENCES Project(project_id)
+  FOREIGN KEY (project_id) REFERENCES Project(project_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Output
@@ -62,6 +62,6 @@ CREATE TABLE Output
   status CHAR(7) NOT NULL,
   project_id CHAR(36) NOT NULL,
   PRIMARY KEY (output_id),
-  FOREIGN KEY (project_id) REFERENCES Project(project_id)
+  FOREIGN KEY (project_id) REFERENCES Project(project_id) ON DELETE CASCADE
 );
 '''
