@@ -44,13 +44,13 @@ https://www.uuidgenerator.net/version4
 5. Run mssql_server/zseed_mssql_database.py
 
 # How to start API
-pip3 install virtualenv
-virtualenv venv
-. venv/bin/activate
-pip3 -r install api/requirements.txt
-cd api/
-./setup.sh
-./run.sh
+1. pip3 install virtualenv
+2. virtualenv venv
+3. . venv/bin/activate
+4. pip3 -r install api/requirements.txt
+5. cd api/
+6. ./setup.sh
+7. ./run.sh
 
 
 
