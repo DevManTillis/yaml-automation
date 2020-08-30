@@ -33,6 +33,7 @@ https://www.uuidgenerator.net/version4
     [x] Command
 [x] Load seed data successfully
 [ ] Build Python3 CRUD Rest APIs for each table
+[ ] Build UI/UX for CRUD
 
 ## How to Load Seed Data
 1. Ensure Python3 3.8.2 is install on local ubuntu system
