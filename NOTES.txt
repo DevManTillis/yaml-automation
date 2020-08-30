@@ -16,12 +16,15 @@ https://www.osradar.com/how-to-install-odbc-on-ubuntu-20-04/
 # Online UUID Generator
 https://www.uuidgenerator.net/version4
 
+# Reference Project ID
+277c3e51-7f39-4a95-8e23-e0287c91d046
+
 # Tasks
 [x] Automate docker container MSSQL server build
 [ ] Create seed data
     [ ] Playbook
     [ ] Role
     [ ] Host
-    [ ] Ansible Config
+    [x] Ansible Config
     [x] Project
 [ ] Load seed data successfully
