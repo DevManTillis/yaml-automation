@@ -1,3 +1,4 @@
 djangorestframework
 django-phonenumber-field
 django
+django-cors-headers
