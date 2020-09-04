@@ -22,7 +22,7 @@ https://www.uuidgenerator.net/version4
 277c3e51-7f39-4a95-8e23-e0287c91d046
 
 
-# Tasks
+# Sprint 1 Tasks
 - [x] 8.29.2020 Automate docker container MSSQL server build
 - [x] 8.29.2020 Create seed data
   - [x] Playbook
@@ -33,7 +33,7 @@ https://www.uuidgenerator.net/version4
   - [x] Command
 - [x] 8.30.2020 Load seed data successfully
 - [x] 8.30.2020 Build Python3 CRUD Rest APIs for each table
-- [ ] Build UI/UX for CRUD
+- [x] 9.03.2020 Build UI/UX for CRUD
 - [ ] Integrate MSSQL docker container with CRUD API model
 
 # How to Load Seed Data
@@ -52,5 +52,10 @@ https://www.uuidgenerator.net/version4
 6. ./setup.sh
 7. ./run.sh
 
+# How to start the UI
+1. Start the API with API directions ^
+2. cd ui/
+3. yarn install
+4. yarn start
 
 
