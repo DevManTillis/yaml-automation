@@ -35,7 +35,14 @@ https://www.uuidgenerator.net/version4
 - [x] 8.30.2020 Build Python3 CRUD Rest APIs for each table
 - [x] 9.03.2020 Build UI/UX for CRUD
 - [x] 9.10.2020 Add search filters to API
+- [ ] Create dynamic form fields based on JSON schema
+
+# Sprint 2 Tasks
+- [ ] Improve UI/UX form fields look
+- [ ] Integrate external service to schedule ansible playbooks
 - [ ] Integrate MSSQL docker container with CRUD API model
+
+
 
 # How to Load Seed Data
 1. Ensure Python3 3.8.2 is install on local ubuntu system
