@@ -34,6 +34,7 @@ https://www.uuidgenerator.net/version4
 - [x] 8.30.2020 Load seed data successfully
 - [x] 8.30.2020 Build Python3 CRUD Rest APIs for each table
 - [x] 9.03.2020 Build UI/UX for CRUD
+- [x] 9.10.2020 Add search filters to API
 - [ ] Integrate MSSQL docker container with CRUD API model
 
 # How to Load Seed Data
