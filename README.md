@@ -21,6 +21,8 @@ https://www.uuidgenerator.net/version4
 ## Reference Project ID for relations
 277c3e51-7f39-4a95-8e23-e0287c91d046
 
+## Reference to JSON UI schema creation
+https://rjsf-team.github.io/react-jsonschema-form/
 
 # Sprint 1 Tasks
 - [x] 8.29.2020 Automate docker container MSSQL server build
@@ -38,7 +40,13 @@ https://www.uuidgenerator.net/version4
 - [ ] Create dynamic form fields based on JSON schema
 
 # Sprint 2 Tasks
-- [ ] Improve UI/UX form fields look
+- [ ] Improve UI/UX form fields
+  - [ ] Playbook
+  - [ ] Role
+  - [ ] Host
+  - [ ] Ansible Config
+  - [ ] Project
+  - [ ] Command
 - [ ] Integrate external service to schedule ansible playbooks
 - [ ] Integrate MSSQL docker container with CRUD API model
 

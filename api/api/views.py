@@ -2,6 +2,14 @@ from rest_framework import viewsets
 from rest_framework import filters
 from . import serializers
 from . import models 
+from django.http import JsonResponse
+
+
+def ui_schema(request):
+    SCHEMA = [{'name': 'Peter', 'email': 'peter@example.org'},
+            {'name': 'Julia', 'email': 'julia@example.org'}]
+    return JsonResponse(SCHEMA, safe=False)
+
 
 # Create your views here.
 class ProjectViewset(viewsets.ModelViewSet):
