@@ -24,6 +24,9 @@ https://www.uuidgenerator.net/version4
 ## Reference to JSON UI schema creation
 https://rjsf-team.github.io/react-jsonschema-form/
 
+## Django URL Manipulation
+https://docs.djangoproject.com/en/3.1/topics/http/urls/
+
 # Sprint 1 Tasks
 - [x] 8.29.2020 Automate docker container MSSQL server build
 - [x] 8.29.2020 Create seed data
