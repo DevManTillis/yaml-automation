@@ -16,5 +16,5 @@ router.register("output", views.OutputViewset)
 
 urlpatterns = [
     path("", include(router.urls)),
-    path('schema/project/', views.ui_schema, name='ui_schema'),
+    path('schema/command/', views.ui_schema, name='ui_schema'),
 ]

@@ -3,12 +3,11 @@ from rest_framework import filters
 from . import serializers
 from . import models 
 from django.http import JsonResponse
+from . import UI_SCHEMA
 
 
 def ui_schema(request):
-    SCHEMA = [{'name': 'Peter', 'email': 'peter@example.org'},
-            {'name': 'Julia', 'email': 'julia@example.org'}]
-    return JsonResponse(SCHEMA, safe=False)
+    return JsonResponse(UI_SCHEMA.COMMAND_SCHEMA, safe=False)
 
 
 # Create your views here.
